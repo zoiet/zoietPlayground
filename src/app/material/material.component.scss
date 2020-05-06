@@ -1,5 +1,7 @@
 table {
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px !important;
   }
   
   tr.example-detail-row {
@@ -33,31 +35,7 @@ table {
     padding: 16px;
     width: 100%;
   }
-  
-  .example-element-description__cell {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  
-  .example-element-description__header {
-    color:#777;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-  
-  .example-element-description__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-  
+
   .example-element-description__content div,
   .example-element-description__header div {
     width: 10%;

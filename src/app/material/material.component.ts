@@ -11,6 +11,56 @@ export interface PeriodicElement {
   description: string;
 }
 
+export interface SortieElement {
+  partTaskType: string;
+  tasked: number;
+  planned: number;
+  executed: number;
+  flown: number;
+  subPartTask: Array<Object>;
+}
+
+const SORTIE_DATA: SortieElement[] = [
+  {
+    partTaskType: 'CSO-L',
+    tasked: 4,
+    planned: 3,
+    executed: 2,
+    flown: 1,
+    subPartTask: [
+      {
+        partTaskType: 'Killbelt',
+        hit: 6,
+        miss: 2
+      },
+      {
+        partTaskType: 'Killbox',
+        hit: 6,
+        miss: 2
+      },
+    ],
+  },
+  {
+    partTaskType: 'CSAR',
+    tasked: 4,
+    planned: 3,
+    executed: 2,
+    flown: 1,
+    subPartTask: [
+      {
+        partTaskType: 'Killbelt',
+        hit: 6,
+        miss: 2
+      },
+      {
+        partTaskType: 'Killbox',
+        hit: 6,
+        miss: 2
+      },
+    ],
+  },
+];
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     position: 1,
@@ -106,11 +156,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
   ],
 })
 export class MaterialComponent {
+  displayedColumns: string[] = ['select', 'partTaskType', 'tasked', 'planned', 'executed', 'flown'];
+  dataSource = new MatTableDataSource<SortieElement>(SORTIE_DATA);
+  selection = new SelectionModel<SortieElement>(true, []);
 
-  displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  selection = new SelectionModel<PeriodicElement>(true, []);
+  displayedColumns1: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
+  dataSource1 = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  selection1 = new SelectionModel<PeriodicElement>(true, []);
   expandedElement: PeriodicElement | null;
+
+  constructor() {
+    this.masterToggle();
+  }
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
@@ -127,11 +184,11 @@ export class MaterialComponent {
   }
 
   /** The label for the checkbox on the passed row */
-  checkboxLabel(row?: PeriodicElement): string {
+  checkboxLabel(row?: SortieElement): string {
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.partTaskType + 1}`;
   }
 
   getKeys(object): string[] {
