@@ -1,0 +1,25 @@
+<div class='content-about-me'>
+  <div class='header-about-me'>
+    <h2>
+      {{title}}
+      <hr>
+    </h2>
+
+  </div>
+  <div class='body-about-me'>
+    <div class="sub-body-about-me">
+      <h3>Hi there!</h3>
+      <label id="season-radio-group-label">Pick your favorite season</label>
+      <mat-radio-group aria-labelledby="season-radio-group-label" class="season-radio-group"
+        [(ngModel)]="favoriteSeason">
+        <mat-radio-button class="season-radio-button" *ngFor="let season of seasons" [value]="season">
+          {{season}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>
+        Your favorite season is: {{favoriteSeason}}
+      </div>
+    </div>
+
+  </div>
+</div>
