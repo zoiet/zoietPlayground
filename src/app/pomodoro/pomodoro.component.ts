@@ -56,15 +56,22 @@ export class PomodoroComponent implements OnInit {
 
     public onStart() {
         console.log("onStart");
+        this.isCounting = true;
     }
 
     public onStop() {
         clearTimeout(this.interval);
+        this.isCounting = false;
+
     }
 
-    public onResume() { }
+    public onResume() {
+        this.isCounting = true;
+    }
 
-    public onReset() { }
+    public onReset() {
+        this.isCounting = false;
+    }
 
     ngOnInit() {
         console.log("Start of Pomodoro");
