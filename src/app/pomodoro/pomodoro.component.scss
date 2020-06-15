@@ -1,34 +1,39 @@
 .pomodoro-background {
-    display: relative;
-    position: flex;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
     flex-direction: row;
     background: #2d2d2d;
     color: white;
-    margin: 10px;
+    margin: 0 100px;
     padding: 5px;
+    text-align: center;
   }
   
   .pomodoro-div {
     background: #3d3d3d;
     border-radius: 5px;
     margin: 10px;
-    padding: 5px;
+    padding: 15px;
   }
   
   .pomodoro-title {
-    font-size: 16px;
+    font-size: 45px;
     font-weight: 600;
+    text-align: center !important;
+    position: unset;
+    padding: 30px;
+    display: block;
   }
-  
+
   .pomodoro-body {
     font-size: 14px;
     font-weight: 400;
   }
   
   .pomodoro-timer {
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 100px;
+font-weight: 600;
+text-align: center;
+margin: 55px;
   }
   
   mat-button-toggle:hover {

@@ -23,7 +23,7 @@ export class PomodoroComponent implements OnInit {
     interval;
 
     public countdown() {
-        this.interval = setTimeout(this.Decrement(), 1000);
+        this.interval = setTimeout(() => this.Decrement(), 1000);
     }
 
     //Decrement function decrement the value.
