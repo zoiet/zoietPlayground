@@ -1,0 +1,28 @@
+<div class="todo-background">
+    <div class="todo-div">
+        <div>Task in Progress: {{taskList.length}}</div>
+        <div>Task Completed: {{checkList.length}}</div>
+        <button (click)="addTask(name)">Add Task</button>
+        <input type="text" [formControl]="name" />
+    </div>
+
+    <div class="todo-div">
+        <span class="todo-title">To Do Tasks</span>
+
+        <ul class="todo-body">
+            <li *ngFor="let t of taskList">
+                <mat-checkbox (change)="onChecked(t)">{{ t }}</mat-checkbox>
+            </li>
+        </ul>
+    </div>
+
+    <div class="todo-div">
+        <span class="todo-title">Completed Tasks</span>
+
+        <ul class="todo-body">
+            <li *ngFor="let c of checkList">
+                --> {{c}}
+            </li>
+        </ul>
+    </div>
+</div>

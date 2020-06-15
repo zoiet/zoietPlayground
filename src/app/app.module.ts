@@ -5,6 +5,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatTableModule } from "@angular/material/table";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatIconModule } from "@angular/material/icon";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,8 @@ import { AboutMeComponent } from './about-me/about-me.component'
 import { DreamsComponent } from './dreams/dreams.component';
 import { ArcGISComponent } from './arcgis/arcgis.component';
 import { MaterialComponent } from './material/material.component';
+import { PomodoroComponent } from './pomodoro/pomodoro.component';
+import { TodoComponent } from './todo/todo.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -23,6 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DreamsComponent,
     ArcGISComponent,
     MaterialComponent,
+    PomodoroComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +40,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DragDropModule,
     MatCheckboxModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatIconModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

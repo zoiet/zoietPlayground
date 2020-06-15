@@ -10,4 +10,5 @@ export class AboutMeComponent {
 
   favoriteSeason: string;
   seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+
 }

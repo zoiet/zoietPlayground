@@ -1,0 +1,25 @@
+<div class="pomodoro-background">
+    <span class="pomodoro-title">Pomodoro Timer</span>
+
+    <div class="pomodoro-div">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="Pomodoro">Pomodoro</mat-button-toggle>
+            <mat-button-toggle value="Short Break">Short Break</mat-button-toggle>
+            <mat-button-toggle value="Long Break">Long Break</mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <div class="pomodoro-timer">
+            {{getminutes()}}:{{getseconds()}}
+        </div>
+        <div class="pomodoro-buttons">
+            <ng-container *ngIf="isCounting === false">
+                <button mat-stroked-button (click)="onStart()">Start</button>
+            </ng-container>
+
+            <ng-container *ngIf="isCounting !== false">
+                <button mat-stroked-button (click)="onStop()">Stop</button>
+                <button mat-stroked-button (click)="onReset()">Reset</button>
+            </ng-container>
+        </div>
+    </div>
+</div>

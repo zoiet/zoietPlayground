@@ -1,0 +1,33 @@
+.todo-background {
+    display: relative;
+    position: flex;
+    border-radius: 4px;
+    flex-direction: row;
+    background: #2d2d2d;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  .todo-div {
+    background: #3d3d3d;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  .todo-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .todo-body {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+  
