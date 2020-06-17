@@ -20,6 +20,14 @@ export interface SortieElement {
   subPartTask: Array<Object>;
 }
 
+export interface GongchaElement {
+  milkTeaName: string;
+  sugarLevel: number;
+  iceLevel: number;
+  toppings: Array<String>;
+  type: string;
+}
+
 const SORTIE_DATA: SortieElement[] = [
   {
     partTaskType: 'CSO-L',
@@ -60,6 +68,143 @@ const SORTIE_DATA: SortieElement[] = [
     ],
   },
 ];
+
+const GONGCHA_DATA: GongchaElement[] = [
+  {
+    milkTeaName: 'Green Milk Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: ['Mini Pearls'],
+    type: 'Tea',
+  },
+  {
+    milkTeaName: 'Oolong Milk Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: ['Aiyu Jelly'],
+    type: 'Tea',
+  },
+  {
+    milkTeaName: 'Alisan Milk Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: ['Taro Balls'],
+    type: 'Tea',
+  },
+  {
+    milkTeaName: 'Earl Grey Milk Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Tea',
+  },
+  {
+    milkTeaName: 'Black Milk Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Tea',
+  },
+  {
+    milkTeaName: 'Taro Drink',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Speciality',
+  },
+  {
+    milkTeaName: 'Chocolate Drink',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Speciality',
+
+  },
+  {
+    milkTeaName: 'Match w Red Bean Drink',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Speciality',
+  },
+  {
+    milkTeaName: 'Milk Foam Green Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Foam',
+  },
+  {
+    milkTeaName: 'Milk Foam Black Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Foam',
+  },
+  {
+    milkTeaName: 'Milk Foam Oolong Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Foam',
+  },
+  {
+    milkTeaName: 'Milk Foam Alisan Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Foam',
+  },
+  {
+    milkTeaName: 'Milk Foam Strawberry Black Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: ['Strawberry Jelly'],
+    type: 'Foam',
+  },
+  {
+    milkTeaName: 'Milk Foam Brown Sugar',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Brown Sugar',
+  },
+  {
+    milkTeaName: 'Brown Sugar Fresh Milk',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: ['Pearl'],
+    type: 'Brown Sugar',
+  },
+  {
+    milkTeaName: 'Brown Sugar Fresh Milk Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: ['Pearl'],
+    type: 'Brown Sugar',
+  },
+  {
+    milkTeaName: 'Mango Green Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Fruit',
+  },
+  {
+    milkTeaName: 'Honey Green Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Fruit',
+  },
+  {
+    milkTeaName: 'Grapefruit Green Tea',
+    sugarLevel: 3,
+    iceLevel: 2,
+    toppings: [],
+    type: 'Fruit',
+  },
+]
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {

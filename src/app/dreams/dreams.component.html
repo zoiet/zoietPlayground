@@ -1,65 +1,67 @@
 <div class='content-dreams'>
-    <div class='header-dreams'>
-        <h2>
-            {{title}}
-        </h2>
-        <p>I have a lot of dreams...</p>
-        <hr>
-    </div>
-    <div class='body-dreams'>
-        <p><img src="../../assets/salior-moon.jpg" alt="Image is not found"
-                style="float:left;width:70px;height:90px;padding:1em">
-            Some say the world will end in fire,
-            Some say in ice.
-            From what I’ve tasted of desire
-            I hold with those who favor fire.
-            But if it had to perish twice,
-            I think I know enough of hate
-            To say that for destruction ice
-            Is also great
-            And would suffice.</p>
-    </div>
-
-    <div class="body-dreams">
-        <div class="sub-body-dreams">
-            <h3>My Dreams</h3>
-            <ul>
-                <li>Live in a camper van and travel Japan</li>
-                <li>Not worry about financial</li>
-                <li>Appreciate everything around me and enjoy life</li>
-                <li>Find meaning in life</li>
-                <li>Live a minimal life</li>
-                <li>Eat healthy</li>
-            </ul>
+    <div class="background">
+        <div class='header-dreams'>
+            <h2>
+                {{title}}
+            </h2>
+            <p>I have a lot of dreams...</p>
+            <hr>
         </div>
-        <div class="sub-body-dreams">
-            <h3>What am I doing to attain my dreams?</h3>
-            <ul>
-                <li>Doing my best in my day job</li>
-                <li>Attaining driving license</li>
-                <li>Getting my Japanese level to N2</li>
-                <li>TESOL / TCSOL</li>
-                <ul>So that I can teach in Japan</ul>
-                <li>Be better in programming</li>
-                <ul>So that I can earn extra revenue</ul>
-            </ul>
+        <div class='body-dreams'>
+            <p><img src="../../assets/salior-moon.jpg" alt="Image is not found"
+                    style="float:left;width:70px;height:90px;padding:1em">
+                Some say the world will end in fire,
+                Some say in ice.
+                From what I’ve tasted of desire
+                I hold with those who favor fire.
+                But if it had to perish twice,
+                I think I know enough of hate
+                To say that for destruction ice
+                Is also great
+                And would suffice.</p>
         </div>
 
-
-    </div>
-    <div class="body-dreams">
-        <div class="sub-body-dreams">
-            <h2>To do</h2>
-            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
-                class="example-list" (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+        <div class="body-dreams">
+            <div class="sub-body-dreams">
+                <h3>My Dreams</h3>
+                <ul>
+                    <li>Live in a camper van and travel Japan</li>
+                    <li>Not worry about financial</li>
+                    <li>Appreciate everything around me and enjoy life</li>
+                    <li>Find meaning in life</li>
+                    <li>Live a minimal life</li>
+                    <li>Eat healthy</li>
+                </ul>
             </div>
+            <div class="sub-body-dreams">
+                <h3>What am I doing to attain my dreams?</h3>
+                <ul>
+                    <li>Doing my best in my day job</li>
+                    <li>Attaining driving license</li>
+                    <li>Getting my Japanese level to N2</li>
+                    <li>TESOL / TCSOL</li>
+                    <ul>So that I can teach in Japan</ul>
+                    <li>Be better in programming</li>
+                    <ul>So that I can earn extra revenue</ul>
+                </ul>
+            </div>
+
+
         </div>
-        <div class="sub-body-dreams">
-            <h2>Done</h2>
-            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
-                class="example-list" (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+        <div class="body-dreams">
+            <div class="sub-body-dreams">
+                <h2>To do</h2>
+                <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
+                    class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                </div>
+            </div>
+            <div class="sub-body-dreams">
+                <h2>Done</h2>
+                <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
+                    class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                </div>
             </div>
         </div>
     </div>

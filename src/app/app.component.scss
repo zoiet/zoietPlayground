@@ -1,6 +1,6 @@
-.background {
-  // background: #3d3d3d;
-  height: max-content;
+.overall-background {
+  background: #3d3d3d;
+  min-height: 100%;
   padding: 0;
   margin: 0;
   color: white;
@@ -73,17 +73,53 @@ display: block;
 
 // Body
 // This applies from 0px to 600px
-.content {
-background: lightpink;
-// display: flex;
-// flex-direction: row;
+// .content {
+// background: lightpink;
+// min-height: 100%;
+// // display: flex;
+// // flex-direction: row;
+// }
+
+// // This applies from 600px onwards
+// @media (min-width: 600px) {
+// .content {
+//   background: lightsteelblue;
+//   min-height: 100%;
+//   // display: flex;
+//   // flex-direction: column;
+// }
+// }
+
+// ==============================
+//     Common CSS
+// ==============================
+.background {
+  border-radius: 0 0 4px 4px;
+  flex-direction: row;
+  background: #2d2d2d;
+  color: white;
+  margin: 0 100px;
+  padding: 0 5px 20px 5px;
+  text-align: center;
 }
 
-// This applies from 600px onwards
-@media (min-width: 600px) {
-.content {
-  background: lightsteelblue;
-  // display: flex;
-  // flex-direction: column;
+.div {
+  background: #3d3d3d;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
 }
+
+.title {
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center !important;
+  position: unset;
+  padding: 30px;
+  display: block;
+}
+
+.body {
+  font-size: 14px;
+  font-weight: 400;
 }
