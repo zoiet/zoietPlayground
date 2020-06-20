@@ -8,8 +8,8 @@ import { MaterialComponent } from './material/material.component';
 import { PomodoroComponent } from './pomodoro/pomodoro.component';
 import { TodoComponent } from './todo/todo.component';
 const routes: Routes = [
-    { path: '', redirectTo: '', pathMatch: 'full' },
-    { path: 'AboutMe', component: AboutMeComponent },
+    // { path: '', redirectTo: '', pathMatch: 'full' },
+    { path: '', component: AboutMeComponent },
     { path: 'Dreams', component: DreamsComponent },
     { path: 'ArcGIS', component: ArcGISComponent },
     { path: 'Mat', component: MaterialComponent },
